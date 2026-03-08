@@ -109,7 +109,7 @@ const transportPath = path.join(__dirname, "public/transport-app/build");
 app.use(express.static(transportPath));
 
 app.get("/transport", (req, res) => {
-    res.sendFile(path.join(transportPath, "index.html"));
+    res.render("transport.ejs");
 });
 
 /* AUTH ROUTES */
