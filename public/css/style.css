@@ -1,0 +1,117 @@
+/* RESET DEFAULT BROWSER STYLES */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body{
+    background-color:#e3cfa4;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+    border-bottom:2px solid #333;
+    padding:15px 25px;
+    display:flex;
+    gap:30px;
+    background-color:#f5f5f5;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#333;
+    font-size:16px;
+    font-weight:500;
+}
+
+.navbar a:hover{
+    color:green;
+}
+/* Navbar Brand (Green India) */
+.navbar-brand{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2e7d32 !important; /* dark green */
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.navbar-brand:hover{
+    color: #1b5e20 !important;
+}
+/* Navbar links hover effect */
+.navbar-nav .nav-link:hover{
+    text-decoration: underline;
+}
+
+/* MAIN CONTENT */
+.main-content{
+    flex:1;
+    padding:25px;
+}
+
+/* PAGE TITLE */
+h1{
+    margin-bottom:20px;
+}
+
+/* CARD CONTAINER */
+.cards-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    width:260px;
+    background:white;
+    border-radius:8px;
+    border:1px solid #ccc;
+    overflow:hidden;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* CARD IMAGE */
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+/* CARD CONTENT */
+.card-body{
+    padding:12px;
+}
+
+.card-body h3{
+    margin-bottom:5px;
+}
+
+.card-body p{
+    font-size:14px;
+    margin-bottom:4px;
+}
+/* Card hover effect */
+.card{
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    background-color:#f8f9fa;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.footer{
+    border-top:2px solid #333;
+    background:#f5f5f5;
+    text-align:center;
+    padding:10px;
+}

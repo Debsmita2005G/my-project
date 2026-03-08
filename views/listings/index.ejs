@@ -1,0 +1,40 @@
+<% layout("layouts/boilerplate") %>
+<h1 class="mb-4">All Crops</h1>
+
+<div class="row">
+
+<% for(let listing of allListings){ %>
+
+<div class="col-md-4 mb-4">
+
+<div class="card h-100 shadow-sm">
+
+<a href="/listings/<%= listing._id %>">
+<img src="<%= listing.image %>" class="card-img-top">
+</a>
+
+<div class="card-body">
+
+<h5 class="card-title"><%= listing.crop %></h5>
+
+<p class="card-text text-success fw-bold">₹ <%= listing.price %> /Kg</p>
+
+<p class="text-muted"><%= listing.location %></p>
+
+</div>
+
+</div>
+
+</div>
+
+<% } %>
+
+</div>
+
+</div>
+
+
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+

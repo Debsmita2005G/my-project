@@ -1,0 +1,54 @@
+<% layout("layouts/boilerplate") %>
+
+<h2 class="mb-4">Edit Crop</h2>
+
+<form action="/listings/<%= listing._id %>?_method=PUT" method="POST" class="border p-4 rounded shadow bg-light">
+
+<div class="mb-3">
+<label class="form-label">Crop Name</label>
+<input name="listing[crop]" value="<%= listing.crop %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Category</label>
+<input name="listing[category]" value="<%= listing.category %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Soil Type</label>
+<input name="listing[soilType]" value="<%= listing.soilType %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Climate</label>
+<input name="listing[climate]" value="<%= listing.climate %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Sowing Season</label>
+<input name="listing[sowingSeason]" value="<%= listing.sowingSeason %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Harvest Season</label>
+<input name="listing[harvestSeason]" value="<%= listing.harvestSeason %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Price per Kg</label>
+<input name="listing[price]" value="<%= listing.price %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Location</label>
+<input name="listing[location]" value="<%= listing.location %>" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Image URL</label>
+<input name="listing[image]" value="<%= listing.image %>" class="form-control">
+</div>
+
+<button class="btn btn-primary">Update Crop</button>
+
+</form>

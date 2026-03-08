@@ -1,0 +1,54 @@
+<% layout("layouts/boilerplate") %>
+
+<h2 class="mb-4">Add New Crop</h2>
+
+<form action="/listings" method="POST" class="border p-4 rounded shadow bg-light">
+
+<div class="mb-3">
+<label class="form-label">Crop Name</label>
+<input name="listing[crop]" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Category</label>
+<input name="listing[category]" class="form-control" placeholder="Fruit / Vegetable / Cereal">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Soil Type</label>
+<input name="listing[soilType]" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Climate</label>
+<input name="listing[climate]" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Sowing Season</label>
+<input name="listing[sowingSeason]" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Harvest Season</label>
+<input name="listing[harvestSeason]" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Price per Kg</label>
+<input type="number" name="listing[price]" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Location</label>
+<input name="listing[location]" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Image URL</label>
+<input name="listing[image]" class="form-control">
+</div>
+
+<button class="btn btn-success">Add Crop</button>
+
+</form>

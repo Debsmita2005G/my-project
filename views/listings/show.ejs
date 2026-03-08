@@ -1,0 +1,33 @@
+<% layout("layouts/boilerplate") %>
+
+<h2 class="mb-4"><%= listing.crop %></h2>
+
+<img src="<%= listing.image %>" class="img-fluid mb-3" style="max-width:400px">
+
+<ul class="list-group">
+
+<li class="list-group-item"><b>Category:</b> <%= listing.category %></li>
+
+<li class="list-group-item"><b>Soil Type:</b> <%= listing.soilType %></li>
+
+<li class="list-group-item"><b>Climate:</b> <%= listing.climate %></li>
+
+<li class="list-group-item"><b>Sowing Season:</b> <%= listing.sowingSeason %></li>
+
+<li class="list-group-item"><b>Harvest Season:</b> <%= listing.harvestSeason %></li>
+
+<li class="list-group-item"><b>Price per Kg:</b> ₹ <%= listing.price %></li>
+
+<li class="list-group-item"><b>Location:</b> <%= listing.location %></li>
+
+</ul>
+
+<a href="/listings/<%= listing._id %>/edit" class="btn btn-primary">
+Edit
+</a>
+
+<form action="/listings/<%= listing._id %>?_method=DELETE" method="POST" style="display:inline;">
+<button class="btn btn-danger">
+Delete
+</button>
+</form>

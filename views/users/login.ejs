@@ -1,0 +1,44 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="row justify-content-center">
+
+<div class="col-md-6">
+
+<h2 class="mb-4 text-center">Login</h2>
+
+<form action="/login" method="POST" class="border p-4 rounded shadow-sm bg-light">
+
+<!-- Username -->
+<div class="mb-3">
+<label class="form-label">Username</label>
+<input 
+type="text" 
+name="username" 
+class="form-control"
+placeholder="Enter username"
+required>
+</div>
+
+<!-- Password -->
+<div class="mb-3">
+<label class="form-label">Password</label>
+<input 
+type="password" 
+name="password" 
+class="form-control"
+placeholder="Enter password"
+required>
+</div>
+
+<!-- Login Button -->
+<div class="d-grid">
+<button class="btn btn-success">
+Login
+</button>
+</div>
+
+</form>
+
+</div>
+
+</div>

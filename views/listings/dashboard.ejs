@@ -1,0 +1,51 @@
+<% layout("layouts/boilerplate") %>
+
+<h2 class="mb-4">Crop Dashboard</h2>
+
+<table class="table table-bordered table-striped">
+
+<thead class="table-dark">
+<tr>
+<th>Crop Name</th>
+<th>Category</th>
+<th>Soil Type</th>
+<th>Climate</th>
+<th>Sowing Season</th>
+<th>Harvest Season</th>
+<th>Price/kg</th>
+<th>Location</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+<% listings.forEach(listing => { %>
+
+<tr>
+<td><%= listing.crop %></td>
+<td><%= listing.category %></td>
+<td><%= listing.soilType %></td>
+<td><%= listing.climate %></td>
+<td><%= listing.sowingSeason %></td>
+<td><%= listing.harvestSeason %></td>
+<td>₹ <%= listing.price %></td>
+<td><%= listing.location %></td>
+
+<td>
+<a href="/listings/<%= listing._id %>" class="btn btn-sm btn-primary">View</a>
+<a href="/listings/<%= listing._id %>/edit" class="btn btn-sm btn-warning">Edit</a>
+
+<form action="/listings/<%= listing._id %>?_method=DELETE" method="POST" style="display:inline;">
+<button class="btn btn-sm btn-danger">Delete</button>
+</form>
+
+</td>
+
+</tr>
+
+<% }) %>
+
+</tbody>
+
+</table>
